@@ -1278,21 +1278,28 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	clear: both;
 	margin: 0 8px 8px 0;
 }
+/*精品展示 热卖商品*/
+.show_best_area{ border-top: 2px solid #06C;border-left: 1px solid #e2e2e2;}
 /*单个商品*/
 .goodsItem {
-	width: 202px;
+	width: 210px;/*202*/
 	float: left;
 	position: relative;
 	overflow: hidden;
-	padding: 10px 18px 15px 18px;
+/*	padding: 10px 18px 15px 18px;*/
 	text-align: left;
 	line-height: 20px;
+	padding:5px 15px;
+	border-bottom: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
 }
 .goodsItem .goodsimg {
 	width: 200px;
 	height: 200px;
-	border: 1px solid #e2e2e2;
+/*	border: 1px solid #e2e2e2;*/
 	margin-bottom: 4px;
+	margin:0px auto;
+	display:block;
 }
 .goodsItem p {
 	text-align: left;
@@ -1300,6 +1307,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	display: block;
 	overflow: hidden
 }
+.goodsItem .big_red{ font-size:24px;}
 .goodsItem p a {
 	text-decoration: none;
 }
@@ -3412,7 +3420,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 }
 /*首页banner下方*****************/
 .rs_sale_box {
-	width: 742px;
+	/*width: 742px;*/
 	height: 188px;
 	margin-top: 10px;
 	border: #ddd 1px solid;
