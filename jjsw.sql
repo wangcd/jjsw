@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-08-28 17:23:02
+Date: 2014-08-29 16:26:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -58,7 +58,7 @@ CREATE TABLE `sw_ad` (
   PRIMARY KEY (`ad_id`),
   KEY `position_id` (`position_id`),
   KEY `enabled` (`enabled`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sw_ad
@@ -79,6 +79,9 @@ INSERT INTO `sw_ad` VALUES ('13', '2', '0', 'idx_step_mid_2', '', '1396213675731
 INSERT INTO `sw_ad` VALUES ('14', '2', '0', 'idx_step_mid_3', '', '1396213710805815596.jpg', '1396166400', '1651219200', '', '', '', '1', '1');
 INSERT INTO `sw_ad` VALUES ('15', '2', '0', 'idx_step_mid_4', '', '1396213743006467956.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
 INSERT INTO `sw_ad` VALUES ('16', '2', '0', 'idx_step_mid_5', '', '1396213781256049417.jpg', '1396166400', '1651219200', '', '', '', '0', '1');
+INSERT INTO `sw_ad` VALUES ('17', '5', '0', 'top_adv', '', '1409248584049922183.jpg', '1409212800', '1411804800', '', '', '', '1', '1');
+INSERT INTO `sw_ad` VALUES ('18', '6', '0', 'float_top', '', '1409253224759631345.jpg', '1409212800', '1411804800', '', '', '', '0', '1');
+INSERT INTO `sw_ad` VALUES ('19', '7', '0', 'float_bottom', '', '1409254113524076590.jpg', '1409212800', '1411804800', '', '', '', '0', '1');
 
 -- ----------------------------
 -- Table structure for `sw_admin_action`
@@ -219,7 +222,7 @@ CREATE TABLE `sw_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `log_time` (`log_time`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=844 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=859 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sw_admin_log
@@ -1067,6 +1070,21 @@ INSERT INTO `sw_admin_log` VALUES ('840', '1398709846', '1', '编辑商品: 运�
 INSERT INTO `sw_admin_log` VALUES ('841', '1398709854', '1', '编辑商品: 运动服', '127.0.0.1');
 INSERT INTO `sw_admin_log` VALUES ('842', '1398709865', '1', '编辑商品: 运动服', '127.0.0.1');
 INSERT INTO `sw_admin_log` VALUES ('843', '1398711884', '1', '编辑权限管理: dsdmall', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('844', '1409247680', '1', '编辑商店设置: ', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('845', '1409247739', '1', '编辑商店设置: ', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('846', '1409247756', '1', '编辑商店设置: ', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('847', '1409247832', '1', '编辑前台语言项: ', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('848', '1409248513', '1', '添加广告位置: top_adv', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('849', '1409248584', '1', '添加广告: top_adv', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('850', '1409249063', '1', '编辑前台语言项: ', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('851', '1409252847', '1', '添加广告位置: float_top', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('852', '1409252863', '1', '添加广告: float_top', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('853', '1409253012', '1', '编辑广告: float_top', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('854', '1409253206', '1', '编辑广告: float_top', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('855', '1409253224', '1', '编辑广告: float_top', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('856', '1409254088', '1', '添加广告位置: float_bottom', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('857', '1409254113', '1', '添加广告: float_bottom', '127.0.0.1');
+INSERT INTO `sw_admin_log` VALUES ('858', '1409255585', '1', '编辑商店设置: ', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for `sw_admin_message`
@@ -1119,7 +1137,7 @@ CREATE TABLE `sw_admin_user` (
 -- ----------------------------
 -- Records of sw_admin_user
 -- ----------------------------
-INSERT INTO `sw_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1409185258', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
+INSERT INTO `sw_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1409247631', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
 INSERT INTO `sw_admin_user` VALUES ('2', 'dsdmall', 'dsdmall@123.com', '0de7ab571c7937d1c222dd808a2834ee', null, '1398711808', '0', '', 'goods_manage,remove_back,cat_manage,cat_drop,brand_manage,comment_priv,goods_batch,article_cat,article_manage,shopinfo_manage,shophelp_manage,feedback_priv,users_manage,users_drop,surplus_manage,account_manage,shop_config,ship_manage,payment,shiparea_manage,area_manage,friendlink,flash_manage,navigator,sitemap,reg_fields,order_os_edit,order_ps_edit,order_ss_edit,order_edit,order_view,order_view_finished,repay_manage,booking,delivery_view,back_view', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, '0');
 
 -- ----------------------------
@@ -1139,6 +1157,7 @@ CREATE TABLE `sw_adsense` (
 INSERT INTO `sw_adsense` VALUES ('1', '本站', '3');
 INSERT INTO `sw_adsense` VALUES ('14', '本站', '1');
 INSERT INTO `sw_adsense` VALUES ('13', '本站', '1');
+INSERT INTO `sw_adsense` VALUES ('17', '本站', '1');
 
 -- ----------------------------
 -- Table structure for `sw_ad_custom`
@@ -1171,7 +1190,7 @@ CREATE TABLE `sw_ad_position` (
   `position_desc` varchar(255) NOT NULL DEFAULT '',
   `position_style` text NOT NULL,
   PRIMARY KEY (`position_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sw_ad_position
@@ -1180,6 +1199,9 @@ INSERT INTO `sw_ad_position` VALUES ('1', '首页资讯下方广告位', '245', 
 INSERT INTO `sw_ad_position` VALUES ('2', 'idx_step_mid', '723', '200', '首页楼层内广告位 中间', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
 INSERT INTO `sw_ad_position` VALUES ('3', 'idx_step_right', '243', '190', '首页楼层内广告位 右侧', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
 INSERT INTO `sw_ad_position` VALUES ('4', 'idx_step_left', '242', '310', '首页楼层内广告位 左侧', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `sw_ad_position` VALUES ('5', 'top_adv', '1200', '90', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `sw_ad_position` VALUES ('6', 'float_top', '1200', '110', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `sw_ad_position` VALUES ('7', 'float_bottom', '1200', '130', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
 
 -- ----------------------------
 -- Table structure for `sw_affiliate_log`
@@ -3071,24 +3093,22 @@ CREATE TABLE `sw_nav` (
   PRIMARY KEY (`id`),
   KEY `type` (`type`),
   KEY `ifshow` (`ifshow`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sw_nav
 -- ----------------------------
-INSERT INTO `sw_nav` VALUES ('1', null, null, '产品展示', '1', '1', '0', 'search.php', 'middle');
-INSERT INTO `sw_nav` VALUES ('2', null, null, '推荐产品', '1', '2', '0', 'search-best.html', 'middle');
-INSERT INTO `sw_nav` VALUES ('3', null, null, '限时抢购', '1', '3', '0', 'search-promotion.html', 'middle');
-INSERT INTO `sw_nav` VALUES ('4', 'a', '4', '商城资讯', '1', '4', '0', 'article_cat-4.html', 'middle');
+INSERT INTO `sw_nav` VALUES ('1', '', '0', '精品推荐', '1', '1', '0', 'search.php', 'middle');
+INSERT INTO `sw_nav` VALUES ('2', '', '0', '今日特价', '1', '2', '0', 'search-best.html', 'middle');
+INSERT INTO `sw_nav` VALUES ('3', '', '0', '限时抢购', '1', '3', '0', 'search-promotion.html', 'middle');
+INSERT INTO `sw_nav` VALUES ('4', 'a', '4', '联系我们', '1', '4', '0', 'article_cat-4.html', 'middle');
 INSERT INTO `sw_nav` VALUES ('5', 'a', '5', '经销商展区', '1', '6', '0', 'article_cat-5.html', 'middle');
-INSERT INTO `sw_nav` VALUES ('6', null, null, '盛得佳帮购', '1', '1', '0', 'index.php', 'bottom');
+INSERT INTO `sw_nav` VALUES ('14', null, null, '商城招商', '1', '5', '0', 'index.php', 'bottom');
 INSERT INTO `sw_nav` VALUES ('7', null, null, '关于我们', '1', '2', '0', '#', 'bottom');
 INSERT INTO `sw_nav` VALUES ('8', null, null, '联系我们', '1', '3', '0', '#', 'bottom');
-INSERT INTO `sw_nav` VALUES ('9', null, null, '友情链接', '1', '4', '0', '#', 'bottom');
-INSERT INTO `sw_nav` VALUES ('10', null, null, '报货平台', '1', '1', '0', '#', 'top');
-INSERT INTO `sw_nav` VALUES ('11', null, null, '客户服务', '1', '2', '0', '#', 'top');
-INSERT INTO `sw_nav` VALUES ('12', null, null, '帮助中心', '1', '3', '0', '#', 'top');
-INSERT INTO `sw_nav` VALUES ('13', '', '0', '联系我们', '1', '5', '0', 'category.php', 'middle');
+INSERT INTO `sw_nav` VALUES ('9', '', '0', '人才招聘', '1', '4', '0', '#', 'bottom');
+INSERT INTO `sw_nav` VALUES ('11', '', '0', '联系我们', '1', '2', '0', '#', 'top');
+INSERT INTO `sw_nav` VALUES ('12', null, null, '帮助中心', '1', '1', '0', '#', 'top');
 
 -- ----------------------------
 -- Table structure for `sw_order_action`
@@ -6856,8 +6876,6 @@ CREATE TABLE `sw_sessions` (
 -- ----------------------------
 -- Records of sw_sessions
 -- ----------------------------
-INSERT INTO `sw_sessions` VALUES ('0e7240d2b477197ed78514a19f9f5528', '1409217657', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1409188857;s:12:\"suppliers_id\";s:1:\"0\";}');
-INSERT INTO `sw_sessions` VALUES ('640ac3e2f265125c82dc2e1fa2774e4b', '1409216853', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:4:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:12:\"captcha_word\";s:16:\"MjI4YTcwMTIwNQ==\";}');
 
 -- ----------------------------
 -- Table structure for `sw_sessions_data`
@@ -6947,15 +6965,15 @@ INSERT INTO `sw_shop_config` VALUES ('6', '0', 'hidden', 'hidden', '', '', '', '
 INSERT INTO `sw_shop_config` VALUES ('7', '0', 'goods', 'group', '', '', '', '1');
 INSERT INTO `sw_shop_config` VALUES ('8', '0', 'sms', 'group', '', '', '', '1');
 INSERT INTO `sw_shop_config` VALUES ('9', '0', 'wap', 'group', '', '', '', '1');
-INSERT INTO `sw_shop_config` VALUES ('101', '1', 'shop_name', 'text', '', '', '大时代商城', '1');
-INSERT INTO `sw_shop_config` VALUES ('102', '1', 'shop_title', 'text', '', '', '大时代商城', '1');
-INSERT INTO `sw_shop_config` VALUES ('103', '1', 'shop_desc', 'text', '', '', '大时代商城', '1');
-INSERT INTO `sw_shop_config` VALUES ('104', '1', 'shop_keywords', 'text', '', '', '大时代商城', '1');
+INSERT INTO `sw_shop_config` VALUES ('101', '1', 'shop_name', 'text', '', '', '金江商贸', '1');
+INSERT INTO `sw_shop_config` VALUES ('102', '1', 'shop_title', 'text', '', '', '金江商贸', '1');
+INSERT INTO `sw_shop_config` VALUES ('103', '1', 'shop_desc', 'text', '', '', '金江商贸', '1');
+INSERT INTO `sw_shop_config` VALUES ('104', '1', 'shop_keywords', 'text', '', '', '金江商贸', '1');
 INSERT INTO `sw_shop_config` VALUES ('105', '1', 'shop_country', 'manual', '', '', '', '1');
 INSERT INTO `sw_shop_config` VALUES ('106', '1', 'shop_province', 'manual', '', '', '', '1');
 INSERT INTO `sw_shop_config` VALUES ('107', '1', 'shop_city', 'manual', '', '', '', '1');
-INSERT INTO `sw_shop_config` VALUES ('108', '1', 'shop_address', 'text', '', '', '三门峡盛得佳帮购商贸有限公司', '1');
-INSERT INTO `sw_shop_config` VALUES ('109', '1', 'qq', 'text', '', '', '', '1');
+INSERT INTO `sw_shop_config` VALUES ('108', '1', 'shop_address', 'text', '', '', '金江商贸', '1');
+INSERT INTO `sw_shop_config` VALUES ('109', '1', 'qq', 'text', '', '', '123456789', '1');
 INSERT INTO `sw_shop_config` VALUES ('110', '1', 'ww', 'text', '', '', '', '1');
 INSERT INTO `sw_shop_config` VALUES ('111', '1', 'skype', 'text', '', '', '', '1');
 INSERT INTO `sw_shop_config` VALUES ('112', '1', 'ym', 'text', '', '', '', '1');
@@ -7219,20 +7237,23 @@ CREATE TABLE `sw_template` (
 -- ----------------------------
 -- Records of sw_template
 -- ----------------------------
+INSERT INTO `sw_template` VALUES ('index', '商品展示', '/library/ad_position.lbi', '8', '7', '0', '4', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '楼层上方广告', '/library/ad_position.lbi', '2', '6', '0', '4', 'red_three', '');
 INSERT INTO `sw_template` VALUES ('index', 'banner右侧区域', '/library/ad_position.lbi', '1', '1', '1', '4', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '头部广告', '/library/ad_position.lbi', '0', '5', '0', '4', 'red_three', '');
 INSERT INTO `sw_template` VALUES ('index', 'banner右侧区域', '/library/cat_articles.lbi', '0', '4', '6', '3', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '5', '5', '3', '1', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '4', '4', '3', '1', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '3', '3', '3', '1', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '2', '2', '3', '1', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '1', '1', '3', '1', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '商品展示', '/library/cat_goods.lbi', '5', '5', '3', '1', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '商品展示', '/library/cat_goods.lbi', '4', '4', '3', '1', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '商品展示', '/library/cat_goods.lbi', '3', '3', '3', '1', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '商品展示', '/library/cat_goods.lbi', '2', '2', '3', '1', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '商品展示', '/library/cat_goods.lbi', '1', '1', '3', '1', 'red_three', '');
 INSERT INTO `sw_template` VALUES ('index', '', '/library/brands.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '楼层上方广告', '/library/recommend_promotion.lbi', '0', '0', '4', '0', 'red_three', '');
 INSERT INTO `sw_template` VALUES ('index', '', '/library/group_buy.lbi', '0', '0', '3', '0', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '全宽行', '/library/recommend_promotion.lbi', '0', '0', '4', '0', 'red_three', '');
 INSERT INTO `sw_template` VALUES ('index', 'banner下方区域', '/library/recommend_hot.lbi', '0', '0', '4', '0', 'red_three', '');
 INSERT INTO `sw_template` VALUES ('index', '', '/library/recommend_new.lbi', '0', '0', '3', '0', 'red_three', '');
-INSERT INTO `sw_template` VALUES ('index', '', '/library/recommend_best.lbi', '0', '0', '3', '0', 'red_three', '');
+INSERT INTO `sw_template` VALUES ('index', '楼层上方广告', '/library/recommend_best.lbi', '1', '0', '3', '0', 'red_three', '');
 
 -- ----------------------------
 -- Table structure for `sw_topic`

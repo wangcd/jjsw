@@ -2834,19 +2834,20 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	margin: 0 auto;
 	padding: 18px 0 0 0;
 }
+/*logo*/
 #site_header .hd_logo_area {
-	width: auto;
+	width: 300px;
 }
 #site_header .hd_logo_area a.fl img {
 	height: 60px;
 }
 .hd_head_search {
 	float: left;
-	margin: 5px 0 0 50px;
+	margin: 5px 100px 0 50px;
 }
 .hd_head_search .hd_search_wrap {
 	float: left;
-	border: 2px solid #e60012;
+	border: 2px solid #CCC;
 	background: #fff;
 }
 .hd_head_search label {
@@ -2864,11 +2865,11 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	margin: 0;
 	position: relative;
 	z-index: 1;
-	background: url(images/indexhead_sprite.png) no-repeat -279px -20px;
+	/*background: url(images/indexhead_sprite.png) no-repeat -279px -20px;*/
 	height: 32px;
 	line-height: 32px\0;
  *line-height:32px;
-	width: 388px;
+	width: 310px;
 	padding-left: 32px;
 	border: 0 none;
 	color: #333;
@@ -3041,7 +3042,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	margin-top: 30px;
 	padding: 10px 0 20px;
 	border-top: 1px solid #f2f2f2;
-	background: #fdfdfd url(images/footer_bg.png) repeat-x 0 bottom;
+	background:#CCC url(images/footer_bg.png) repeat-x 0 bottom;
 }
 .ft_service_link dl {
 	float: left;
@@ -3100,11 +3101,12 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 .ft_pic_link a.gs {
 	cursor: text;
 }
+/*底部商家承诺*/
 .ft_footer_service {
-	padding: 5px 0 4px;
-	height: 50px;
+	width:100%;
 	line-height: 40px;
 	text-align: center;
+	background:#999;
 }
 .ft_footer_service a {
 	margin: 0 45px;
@@ -3558,7 +3560,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	border-right: #ddd 1px solid;
 }
 .rs_pbox_tit {
-	border-bottom: #C81818 3px solid;
+	border-bottom:#09C 3px solid;
 	border-right: #ddd 1px solid;
 	border-top: #ddd 1px solid;
 }
@@ -3828,3 +3830,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 .rk_kfbox_li {padding: 4px 0 4px 8px; text-align: left;}
 .rk_kfbox_li img {padding-right: 8px;}
 /******************************************************************/
+
+/*头部通栏广告*/
+.top_adv{ width:100%; background:#cb0101;}
+.top_adv table{ margin:0px auto;}

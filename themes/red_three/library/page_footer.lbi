@@ -38,9 +38,11 @@
   <!--{/if}--> 
   
 </div>
+
 <div id="footer">
-	<div id="rs_tmp_footer"><img src="images/rs_tmp_foot.jpg" /></div>
-  <div class="ft_footer_service"> <a target="_blank" href="#"><span class="s1"></span>全国包邮</a> <a target="_blank" href="#"><span class="s2"></span>正品保障</a> <a target="_blank" href="#"><span class="s3"></span>售后无忧</a> </div>
+  	<div class="ft_footer_service"> 
+		<img src="images/zpbz.jpg">
+     </div>
   <!--底部导航 start-->
   <p class="ft_footer_link"> 
     <!-- {if $navigator_list} --> 
@@ -61,9 +63,11 @@
   <p>{$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a></p>
   <!-- 结束ICP 证书{/if} -->
   
-  <p> <!-- 客服电话{if $service_phone} --> 
+  <p> <!-- 客服电话{if !$service_phone} --> 
     Tel: {$service_phone} 
     <!-- 结束客服电话{/if} --> 
+
+
     <!-- 邮件{if $service_email} --> 
     E-mail: {$service_email}<br />
     <!-- 结束邮件{/if} --></p>
@@ -92,8 +96,7 @@
     <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a> 
     <!-- {/if} --> 
     <!-- {/foreach} --></p>
-  <p>{$copyright}</p>
-  <p>{$shop_address} {$shop_postcode}</p>
+<!--  <p>{$copyright}</p>    <p>{$shop_address} {$shop_postcode}</p>-->
 </div>
 <div class="ft_pic_link" id="footerbanner2LazyLoad"> <a href="#"><img src="images/foot_img1.jpg"></a>| <a href="#"><img src="images/foot_img2.jpg"></a>|<a href="#"><img src="images/foot_img3.jpg"></a>|<a><img src="images/foot_img4.jpg"></a>|<a href="#"><img src="images/foot_img5.jpg"></a>|<a href="#"><img src="images/foot_img6.jpg"></a>|<a href="#"><img src="images/foot_img7.jpg"></a>|<a href="h#"><img src="images/foot_img8.jpg"></a>|</div>
 
