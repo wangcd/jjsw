@@ -17,27 +17,6 @@
   </div>
 </div>
 <!--{/if}-->
-<div id="VjiaFooter" class="block">
-  
-  
-  <!--{if $img_links  or $txt_links }-->
-  
-  <div class="box_1">
-    <div class="links clearfix"> 
-      <!--开始图片类型的友情链接{foreach from=$img_links item=link}--> 
-      <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a> 
-      <!--结束图片类型的友情链接{/foreach}--> 
-      <!-- {if $txt_links} --> 
-      <!--开始文字类型的友情链接{foreach from=$txt_links item=link}--> 
-      [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>] 
-      <!--结束文字类型的友情链接{/foreach}--> 
-      <!-- {/if} --> 
-    </div>
-  </div>
-  <div class="blank"></div>
-  <!--{/if}--> 
-  
-</div>
 
 <div id="footer">
   	<div class="ft_footer_service"> 
@@ -71,11 +50,13 @@
     <!-- 邮件{if $service_email} --> 
     E-mail: {$service_email}<br />
     <!-- 结束邮件{/if} --></p>
+    
   <p> <!-- QQ 号码 {foreach from=$qq item=im} --> 
     <!-- {if $im} --> 
-    <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a> 
+    <!--<a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a> -->
     <!-- {/if} --> 
     <!-- {/foreach} 结束QQ号码 --> 
+    
     <!-- 淘宝旺旺 {foreach from=$ww item=im} --> 
     <!-- {if $im} --> 
     <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a> 
@@ -98,7 +79,13 @@
     <!-- {/foreach} --></p>
 <!--  <p>{$copyright}</p>    <p>{$shop_address} {$shop_postcode}</p>-->
 </div>
-<div class="ft_pic_link" id="footerbanner2LazyLoad"> <a href="#"><img src="images/foot_img1.jpg"></a>| <a href="#"><img src="images/foot_img2.jpg"></a>|<a href="#"><img src="images/foot_img3.jpg"></a>|<a><img src="images/foot_img4.jpg"></a>|<a href="#"><img src="images/foot_img5.jpg"></a>|<a href="#"><img src="images/foot_img6.jpg"></a>|<a href="#"><img src="images/foot_img7.jpg"></a>|<a href="h#"><img src="images/foot_img8.jpg"></a>|</div>
+<!--{if $img_links  or $txt_links }-->
+<div class="ft_pic_link" id="footerbanner2LazyLoad"> 
+<!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}"><img src="{$link.logo}"></a>| 
+<!--结束图片类型的友情链接{/foreach}-->    
+</div>
+<!-- {/if} -->
 
 
 
