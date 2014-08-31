@@ -329,12 +329,12 @@ function reg(str){
    <div class="blank"></div>
    <!--商品详情end-->
    <!--商品描述，商品属性 START-->
-     <div class="box">
+     <div class="box info_message">
  
       <div style="padding:0 0px;">
         <div id="com_b" class="history clearfix">
-        <h2>商品描述</h2>
-        <h2 class="h2bg">{$lang.goods_attr}</h2>
+        <h2 class="h2">商品描述</h2>
+        <h2 class="h3">{$lang.goods_attr}</h2>
         <!-- {if $package_goods_list} -->
         <h2 class="h2bg" style="color:red;">{$lang.remark_package}</h2>
         <!-- {/if} -->

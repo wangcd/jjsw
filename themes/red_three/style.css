@@ -1421,20 +1421,28 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 .history {
 	border-bottom: none;
 }
-.history h2 {
+.history .h2 {
+	height: 32px;
+	line-height: 32px;
+	width: 200px;
+	text-align: center;
+	font-size: 12px;
+	float: left;
+	color: #fff;
+	background: #574647;
+
+}
+.history .h3 {
 	height: 32px;
 	line-height: 32px;
 	width: 148px;
 	text-align: center;
 	font-size: 12px;
 	float: left;
-	color: #fff;
-	background: #E60012;
-	margin-right: 5px;
+
 }
 .history .h2bg {
 	border: 1px solid #ddd;
-	border-bottom: none;
 	color: #666;
 	height: 31px;
 	line-height: 31px;
@@ -3893,3 +3901,5 @@ padding: 10px 15px;}
 }
 /**/
 .cd_goodsBox{ border:1px solid #ccc;}
+#com_b{ width:955px; background:#ccc; border-bottom:1px solid #999;}
+.info_message{ border:1px solid #ccc; width:955px; overflow:hidden;}
