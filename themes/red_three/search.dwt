@@ -15,10 +15,10 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+
 <div class="block clearfix">
   <!--left start-->
-  <div class="AreaL">
+  <div class="cd_category_tree_box">
     <!-- TemplateBeginEditable name="左边区域" -->
  
     <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem -->
@@ -26,11 +26,12 @@
     <!-- TemplateBeginEditable name="左边广告区域（宽200px）" -->
     <!-- TemplateEndEditable -->
     <!--AD end-->
-    <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+    <!-- #BeginLibraryItem "/library/goods_hot.lbi" --><!-- #EndLibraryItem -->
   </div>
   <!--left end-->
   <!--right start-->
   <div class="AreaR">
+  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
   <!-- {if $action eq "form"} -->
   <!--  搜索的表单 -->
   <div class="box">
@@ -214,21 +215,21 @@
                 </div>
              <!-- {elseif $pager.display == 'grid'} -->
          
-              <div class="clearfix goodsBox" style="border:none; padding:11px 0 10px 5px;">
+              <div class="clearfix goodsBox cd_goodsBox">
                 <!--{foreach from=$goods_list item=goods}-->
                 <!-- {if $goods.goods_id} -->
-                 <div class="goodsItem">
+                 <div class="goodsItem" style="border:0px;">
                        <a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" /></a><br />
-                       <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a></p>
                        <!-- {if $show_marketprice} -->
-                        {$lang.market_prices}：<font class="market_s">{$goods.market_price}</font><br />
+                        <font class="market_s">{$goods.market_price}</font><br />
                         <!-- {/if} -->
                         <!--{if $goods.promote_price neq "" } -->
-                        {$lang.promote_price}：<font class="shop_s">{$goods.promote_price}</font><br />
+                        <font class="shop_s">{$goods.promote_price}</font><br />
                         <!--{else}-->
-                        {$lang.shop_prices}：<font class="shop_s">{$goods.shop_price}</font><br />
+                        <font class="shop_s">{$goods.shop_price}</font><br />
                         <!--{/if}-->
-						
+						<p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a></p>
+                        <p style="text-align:center"><a href="{$goods.url}" title=""><img src="images/qgm.jpg" /></a></p>
 						<!-- 
                         <a href="javascript:addToCart({$goods.goods_id})" ><img src="../images/goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="javascript:collect({$goods.goods_id});"><img src="../images/shoucang.gif"></a> 

@@ -23,7 +23,7 @@
                </font> <br/>  
                <font class="market">{$goods.market_price}</font> 
            </p>
-           <a href="" style="float:right"><img src="images/goumai2.gif" width="80" height="30"></a>  
+           <a href="" style="float:right"><img src="images/ljqg.jpg" width="80" height="30"></a>  
             
 		</li>
 		<!--{/if}-->

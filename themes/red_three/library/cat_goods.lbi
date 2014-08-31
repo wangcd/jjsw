@@ -2,8 +2,18 @@
 
 <div class="rs_idx_gl">
     <div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
-        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}</div>
-        <div class="rs_igl_tit_blank">水果 面包  水果面包</div>
+        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}<span></span></div>
+        <div class="rs_igl_tit_blank">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach" key=key}-->
+						<!--{if $smarty.foreach.cate2_foreach.iteration < 5}-->
+						<a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a>
+						<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->        
+        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">
@@ -52,7 +62,7 @@
 						</span><br>
 						<del>{$goods.market_price}</del>
 					</p>
-                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/gwc.jpg" /></a>
 					</div>
 				</li>
 				<!--{/foreach}-->

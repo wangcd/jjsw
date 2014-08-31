@@ -73,7 +73,7 @@ var process_request = "{$lang.process_request}";
 
 <!-- 顶部LOGO搜索 start -->
 <div id="site_header" class="wrap clearfix">
-  <div id="logo_areaID" class="hd_logo_area fl clearfix"> <a href="index.php" class="fl"> <img src="images/logo.gif"> </a> </div>
+  <div id="logo_areaID" class="hd_logo_area fl clearfix"> <a href="index.php" class="fl"> <img src="images/logo.jpg"> </a> </div>
   <script type="text/javascript">
     {literal}
     <!--
