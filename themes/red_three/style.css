@@ -200,7 +200,7 @@ a {
 /*	border: 1px solid #ddd;*/
 	background-color: #fff;
 }
-.box_1 h3 span{ display:block; padding-left:80px; width:200px; height:32px; line-height:32px; background:#cc0001; color:#fff;}
+.box_1 h3 span{ display:block; padding-left:80px; width:135px; height:32px; line-height:32px; background:#cc0001; color:#fff;}
 .box_2 {
 	border: 1px solid #ddd;
 	background: url(images/box_2Bg.gif) repeat-x top left;
@@ -298,6 +298,8 @@ h6 span {
 	width: 966px;
 	float: right;
 }
+.AreaR h3{ background:#f4f4f4;}
+.AreaR h3 span{ background:#cc0001; width:200px; padding-left:20px; color:#fff;}
 /* ====================
      导航部分
 ==================== */
@@ -812,7 +814,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 /*页面主导航*/
 .menu_box {
 	background: #CC0001;
-	height: 45px;
+	height: 40px;
 }
 .menu_box a {
 	display: inline-block;
@@ -2461,7 +2463,8 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 }
 .art_cat_box td {
 	border-bottom: 1px solid #dbdbdb;
-	font-weight: normal
+	font-weight: normal;
+	height:28px; line-height:25px;
 }
 .art_cat_box td a {
 	font-weight: bold;
@@ -2859,14 +2862,14 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 }
 /*logo*/
 #site_header .hd_logo_area {
-	width: 300px;
+	width: 400px;
 }
 #site_header .hd_logo_area a.fl img {
 	height: 60px;
 }
 .hd_head_search {
 	float: left;
-	margin: 5px 100px 0 50px;
+	margin: 20px 80px 0 50px;
 }
 .hd_head_search .hd_search_wrap {
 	float: left;
@@ -2892,7 +2895,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	height: 32px;
 	line-height: 32px\0;
  *line-height:32px;
-	width: 310px;
+	width: 250px;
 	padding-left: 32px;
 	border: 0 none;
 	color: #333;
@@ -3903,3 +3906,11 @@ padding: 10px 15px;}
 .cd_goodsBox{ border:1px solid #ccc;}
 #com_b{ width:955px; background:#ccc; border-bottom:1px solid #999;}
 .info_message{ border:1px solid #ccc; width:955px; overflow:hidden;}
+/*当前位置*/
+
+/*联系我们*/
+.cd_block{ width:900px; height:100px; border:1px solid;}
+#logo_box{ height:100px; padding-top:10px;}
+#ECS_CARTINFO{ margin-top:20px; display: inline-block; width:108px; height:31px; background:url(images/wdgwc.jpg) no-repeat;cursor: pointer; padding-left:60px; padding-top:10px;}
+#ECS_CARTINFO a{ color:#cc0001 !important; font-size:14px !important;}
+#ECS_CARTINFO span{ color:#cc0001 !important; font-size:14px !important;}

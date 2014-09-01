@@ -36,7 +36,12 @@
   <!--  搜索的表单 -->
   <div class="box">
    <div class="box_1">
-    <h3><span>{$lang.advanced_search}</span></h3>
+    <h3><span>
+    <!--{if $lang.advanced_search eq "本月热销"}-->
+    今日特价
+    <!--{/if}-->
+    {$lang.advanced_search}
+    </span></h3>
     <div class="boxCenterList">
       <form action="search.php" method="get" name="advancedSearchForm" id="advancedSearchForm">
     <table border="0" align="center" cellpadding="3">
@@ -149,9 +154,11 @@
                <select name="sort">
               {html_options options=$lang.sort selected=$pager.search.sort}
               </select>
+              
               <select name="order">
               {html_options options=$lang.order selected=$pager.search.order}
               </select>
+              
               <input type="image" name="imageField" src="../images/bnt_go.gif" alt="go"/>
               <input type="hidden" name="page" value="{$pager.page}" />
               <input type="hidden" name="display" value="{$pager.display}" id="display" />

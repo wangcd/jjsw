@@ -72,7 +72,7 @@ var process_request = "{$lang.process_request}";
 <!-- 顶部灰色导航 end --> 
 
 <!-- 顶部LOGO搜索 start -->
-<div id="site_header" class="wrap clearfix">
+<div id="logo_box" class="wrap clearfix">
   <div id="logo_areaID" class="hd_logo_area fl clearfix"> <a href="index.php" class="fl"> <img src="images/logo.jpg"> </a> </div>
   <script type="text/javascript">
     {literal}
@@ -107,10 +107,9 @@ var process_request = "{$lang.process_request}";
       {/if} </p>
   </div>
   <!--新加 我的购物车-->
-  <a href=""><img src="images/wdgwc.jpg"></a>
+  <span id="ECS_CARTINFO">{insert name='cart_info'}</span>
 </div>
 <!-- 顶部LOGO搜索 end -->
-<div style="height:10px;"></div>
 <div class="menu_box clearfix">
   <div class="block" style="position:relative;">
     <div class="menu"> <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}<span></span></a> 
@@ -119,7 +118,6 @@ var process_request = "{$lang.process_request}";
       
       <!-- {/foreach} -->
       
-      <div class="shopcart" id="ECS_CARTINFO">{insert name='cart_info'}</div>
     </div>
   </div>
 </div>

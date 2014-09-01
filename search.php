@@ -104,6 +104,7 @@ if ($_REQUEST['act'] == 'advanced_search')
     $smarty->assign('action',     'form');
     $smarty->assign('use_storage', $_CFG['use_storage']);
 	$smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
+
     $smarty->display('search.dwt');
 
     exit;
@@ -517,6 +518,10 @@ else
     $smarty->assign('top_goods',  get_top10());           // 销售排行
     $smarty->assign('promotion_info', get_promotion_info());
 	$smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
+//	$arrt=get_recommend_goods('hot');
+//	echo "<pre>";
+//	print_r($arrt);
+//	echo "</pre>";exit();	
     $smarty->display('search.dwt');
 }
 
