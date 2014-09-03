@@ -28,7 +28,7 @@ var process_request = "{$lang.process_request}";
      
     </script>
 
-{insert_scripts files='jquery-1.8.3.min.js,jquery.json-2.4.min.js,transport.js,utils.js'} 
+
 <!-- 顶部灰色 start -->
 <div id="global_top_bar" class=" hd_global_top_bar ">
   <div class="wrap clearfix">
@@ -112,12 +112,12 @@ var process_request = "{$lang.process_request}";
 <!-- 顶部LOGO搜索 end -->
 <div class="menu_box clearfix">
   <div class="block" style="position:relative;">
-    <div class="menu"> <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}<span></span></a> 
+  	<div class="cd_all_categroy"></div>
+    <div class="menu">
+      <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}<span></span></a> 
       <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} --> 
       <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}> {$nav.name} <span></span> </a> 
-      
       <!-- {/foreach} -->
-      
     </div>
   </div>
 </div>

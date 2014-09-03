@@ -2,7 +2,7 @@
 	<div class="rs_bnr_box">
 		<div class="rs_bnr_boxtit">
 			<h2><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></h2>
-			<div class="fr"><a href="{$articles_cat.url}">更多资讯&nbsp;&gt;</a></div>
+			<div class="fr"><a href="{$articles_cat.url}">更多&nbsp;&gt;&gt;</a></div>
 		</div>
 		<div class="rs_bnr_boxdl">
 			<ul class="rs_bnr_newslist">

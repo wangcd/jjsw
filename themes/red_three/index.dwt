@@ -61,34 +61,15 @@
 
 <!-- {if $new_goods} -->
 <!-- {if $cat_rec_sign neq 1} -->
-<div class="xm-box">
-<h4 class="title"><span>新品上架</span> <a class="more" href="../search.php?intro=new">更多</a></h4>
-<div class="blank"></div>
 <div id="show_new_area" class="clearfix">
   <!-- {/if} -->
   <!--{foreach from=$new_goods item=goods}-->
-  <div class="goodsItem">
-       
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
-           <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
-           
-           
- 市场价：<font class="market">{$goods.market_price}</font> <br/>
-      
-           本店价：<font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          {$goods.promote_price}
-          <!-- {else}-->
-          {$goods.shop_price}
-          <!--{/if}-->
-           </font>      
-		    
-        </div>
+  <div class="goods_show_Item">
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="215" /></a><br />  
+  </div>
   <!--{/foreach}-->
  
   <!-- {if $cat_rec_sign neq 1} -->
-  </div>
-
 </div>
 <div class="blank"></div>
   <!-- {/if} -->
@@ -105,7 +86,7 @@
 	<div class="rs_bnr_box">
 		<div class="rs_bnr_boxtit">
 			<h2><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></h2>
-			<div class="fr"><a href="{$articles_cat.url}">更多资讯&nbsp;&gt;</a></div>
+			<div class="fr"><a href="{$articles_cat.url}">更多&nbsp;&gt;&gt;</a></div>
 		</div>
 		<div class="rs_bnr_boxdl">
 			<ul class="rs_bnr_newslist">
@@ -206,8 +187,18 @@ function countDown(time, elemId){
 
 <div class="rs_idx_gl">
     <div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
-        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}</div>
-        <div class="rs_igl_tit_blank">水果 面包  水果面包</div>
+        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}<span></span></div>
+        <div class="rs_igl_tit_blank">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach" key=key}-->
+						<!--{if $smarty.foreach.cate2_foreach.iteration < 5}-->
+						<a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a>
+						<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->        
+        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">
@@ -256,7 +247,7 @@ function countDown(time, elemId){
 						</span><br>
 						<del>{$goods.market_price}</del>
 					</p>
-                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/gwc.jpg" /></a>
 					</div>
 				</li>
 				<!--{/foreach}-->
@@ -294,8 +285,18 @@ function countDown(time, elemId){
 
 <div class="rs_idx_gl">
     <div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
-        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}</div>
-        <div class="rs_igl_tit_blank">水果 面包  水果面包</div>
+        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}<span></span></div>
+        <div class="rs_igl_tit_blank">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach" key=key}-->
+						<!--{if $smarty.foreach.cate2_foreach.iteration < 5}-->
+						<a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a>
+						<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->        
+        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">
@@ -344,7 +345,7 @@ function countDown(time, elemId){
 						</span><br>
 						<del>{$goods.market_price}</del>
 					</p>
-                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/gwc.jpg" /></a>
 					</div>
 				</li>
 				<!--{/foreach}-->
@@ -382,8 +383,18 @@ function countDown(time, elemId){
 
 <div class="rs_idx_gl">
     <div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
-        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}</div>
-        <div class="rs_igl_tit_blank">水果 面包  水果面包</div>
+        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}<span></span></div>
+        <div class="rs_igl_tit_blank">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach" key=key}-->
+						<!--{if $smarty.foreach.cate2_foreach.iteration < 5}-->
+						<a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a>
+						<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->        
+        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">
@@ -432,7 +443,7 @@ function countDown(time, elemId){
 						</span><br>
 						<del>{$goods.market_price}</del>
 					</p>
-                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/gwc.jpg" /></a>
 					</div>
 				</li>
 				<!--{/foreach}-->
@@ -470,8 +481,18 @@ function countDown(time, elemId){
 
 <div class="rs_idx_gl">
     <div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
-        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}</div>
-        <div class="rs_igl_tit_blank">水果 面包  水果面包</div>
+        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}<span></span></div>
+        <div class="rs_igl_tit_blank">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach" key=key}-->
+						<!--{if $smarty.foreach.cate2_foreach.iteration < 5}-->
+						<a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a>
+						<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->        
+        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">
@@ -520,7 +541,7 @@ function countDown(time, elemId){
 						</span><br>
 						<del>{$goods.market_price}</del>
 					</p>
-                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/gwc.jpg" /></a>
 					</div>
 				</li>
 				<!--{/foreach}-->
@@ -558,8 +579,18 @@ function countDown(time, elemId){
 
 <div class="rs_idx_gl">
     <div class="rs_igl_tit rs_jq_gl_{$goods_cat.id}">
-        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}</div>
-        <div class="rs_igl_tit_blank">水果 面包  水果面包</div>
+        <div class="rs_igl_tit_img">{$goods_cat.id}F{$goods_cat.name}<span></span></div>
+        <div class="rs_igl_tit_blank">
+				<!--{foreach from=$categories item=cates name="cate_foreach"}-->
+				<!-- {if $cates.id eq $goods_cat.id} -->
+					<!--{foreach from=$cates.cat_id item=cate_child2 name="cate2_foreach" key=key}-->
+						<!--{if $smarty.foreach.cate2_foreach.iteration < 5}-->
+						<a href="{$cate_child2.url}">{$cate_child2.name|escape:html}</a>
+						<!--{/if}-->
+					<!--{/foreach}-->
+				<!--{/if}-->
+				<!--{/foreach}-->        
+        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">
@@ -608,7 +639,7 @@ function countDown(time, elemId){
 						</span><br>
 						<del>{$goods.market_price}</del>
 					</p>
-                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/rs_go.png" /></a>
+                    	<a href="{$goods.url}" style="float:right;" title="{$goods.name|escape:html}" target="_blank"><img src="images/gwc.jpg" /></a>
 					</div>
 				</li>
 				<!--{/foreach}-->

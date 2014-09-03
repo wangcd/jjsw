@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- {if $hot_goods} -->
 <div class="cd_rxcpph">
-    	<p class="cd_category_tree">人气排行<a href="search.php" style="float:right; color:#09F;">更多>></a></>
+    	<p class="cd_category_rqph">人气排行<a href="search.php" style="float:right; color:#09F;">更多>></a></p>
         <ul>
             <!--{foreach from=$hot_goods item=goods key=key}-->
             <!--{if $key != 0}-->

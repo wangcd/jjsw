@@ -95,7 +95,11 @@ if ($_REQUEST['act'] == 'advanced_search')
     $smarty->assign('page_title', $position['title']);    // 页面标题
     $smarty->assign('ur_here',    $position['ur_here']);  // 当前位置
 
-    $smarty->assign('categories', get_categories_tree()); // 分类树
+	$data= get__tree();
+    $menu_json = json_encode($data);
+    $smarty->assign('menu_json', $menu_json);
+
+
     $smarty->assign('helps',      get_shop_help());       // 网店帮助
     $smarty->assign('top_goods',  get_top10());           // 销售排行
     $smarty->assign('promotion_info', get_promotion_info());
@@ -513,7 +517,12 @@ else
     $smarty->assign('page_title', $position['title']);    // 页面标题
     $smarty->assign('ur_here',    $position['ur_here']);  // 当前位置
     $smarty->assign('intromode',      $intromode);
-    $smarty->assign('categories', get_categories_tree()); // 分类树
+
+	$data= get__tree();
+    $menu_json = json_encode($data);
+    $smarty->assign('menu_json', $menu_json);
+
+
     $smarty->assign('helps',       get_shop_help());      // 网店帮助
     $smarty->assign('top_goods',  get_top10());           // 销售排行
     $smarty->assign('promotion_info', get_promotion_info());
@@ -614,5 +623,24 @@ function get_seachable_attributes($cat_id = 0)
     }
 
     return $attributes;
+}
+/*获取商品分类列表*/
+function get__tree()
+{
+
+        $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category');
+        $res = $GLOBALS['db']->getAll($sql);
+//              echo "<pre>";
+//              print_r($res);
+//              echo "</pre>";exit();  
+		$i=0;      
+        foreach ($res as $row)
+        {	   $cat_arr[$i]['id']   = $row['id'];
+        	   $cat_arr[$i]['pId']   = $row['pId'];
+               $cat_arr[$i]['name'] = $row['name'];	
+               $cat_arr[$i]['url']  = build_uri('category', array('cid' => $row['id']), $row['name']);
+               $i++;
+        }
+         return $cat_arr;
 }
 ?>

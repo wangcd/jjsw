@@ -190,7 +190,11 @@ if (!$smarty->is_cached('goods.dwt', $cache_id))
         $smarty->assign('goods',              $goods);
         $smarty->assign('goods_id',           $goods['goods_id']);
         $smarty->assign('promote_end_time',   $goods['gmt_end_time']);
-        $smarty->assign('categories',         get_categories_tree($goods['cat_id']));  // 分类树
+
+
+	$data= get__tree();
+    $menu_json = json_encode($data);
+    $smarty->assign('menu_json', $menu_json);
 
         /* meta */
         $smarty->assign('keywords',           htmlspecialchars($goods['keywords']));
@@ -621,6 +625,25 @@ function get_package_goods_list($goods_id)
     }
 
     return $res;
+}
+/*获取商品分类列表*/
+function get__tree()
+{
+
+        $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category');
+        $res = $GLOBALS['db']->getAll($sql);
+//              echo "<pre>";
+//              print_r($res);
+//              echo "</pre>";exit();  
+		$i=0;      
+        foreach ($res as $row)
+        {	   $cat_arr[$i]['id']   = $row['id'];
+        	   $cat_arr[$i]['pId']   = $row['pId'];
+               $cat_arr[$i]['name'] = $row['name'];	
+               $cat_arr[$i]['url']  = build_uri('category', array('cid' => $row['id']), $row['name']);
+               $i++;
+        }
+         return $cat_arr;
 }
 
 ?>
