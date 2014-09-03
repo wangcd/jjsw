@@ -28,6 +28,7 @@
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <div class="block clearfix">
 	<div class="AreaL">
+    <div id="cd_all_category"></div>
 	<!-- #BeginLibraryItem "/library/category_tree_index.lbi" -->
 	  <div id="category_tree">
 	  <div class="tit"><img src="../images/category_tit.gif"> </div>
@@ -52,7 +53,7 @@
 
 
 
-<div style="float:left; width:744px; margin: 0px 0 5px 0px;"> 
+<div style="float:left; width:744px; margin: 0px 0 5px -11px;"> 
 <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
  
  

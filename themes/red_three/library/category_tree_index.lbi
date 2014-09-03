@@ -21,11 +21,6 @@
     
     
   <div id="category_tree">
-  <div class="tit">
-  	所有商品分类
-  	<div class="rs_cate_jiantou"></div>
-  	<div class="rs_cate_yinying"></div>
-  </div>
   <dl class="clearfix" >
      <!--{foreach from=$categories item=cat name=no}-->
         <div  class="dt" onMouseOver="sw_nav2({$smarty.foreach.no.iteration},1);" onMouseOut="sw_nav2({$smarty.foreach.no.iteration},0);" >

@@ -173,6 +173,7 @@ ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height
 <div class="block clearfix">
   <!--left start-->
   <div class="cd_category_tree_box">
+  <div id="cd_all_category"></div>
   <div class="cd_category_tree">
     <!-- TemplateBeginEditable name="左边区域" -->
 <!-- #BeginLibraryItem "/library/category_tree.lbi" -->

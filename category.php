@@ -702,7 +702,7 @@ function get_parent_grade($cat_id)
 function get__tree()
 {
 
-        $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category');
+        $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1";
         $res = $GLOBALS['db']->getAll($sql);
 //              echo "<pre>";
 //              print_r($res);

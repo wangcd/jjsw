@@ -112,8 +112,7 @@ var process_request = "{$lang.process_request}";
 <!-- 顶部LOGO搜索 end -->
 <div class="menu_box clearfix">
   <div class="block" style="position:relative;">
-  	<div class="cd_all_categroy"></div>
-    <div class="menu">
+    <div class="cd_menu">
       <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}<span></span></a> 
       <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} --> 
       <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}> {$nav.name} <span></span> </a> 
