@@ -163,17 +163,20 @@ function countDown(time, elemId){
 <!--限时抢购-->
 <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --> <!-- #EndLibraryItem -->
 <script>
-/*$(function(){
+$(function(){
 	$(".best_hot").click(function(){
+		var id=$(this).index();
 		$(".best_hot").css("color","#300");
 		$(this).css("color","#b22825");
 		$(".show_best_area").css("display","none");
-		$(".show_best_area:eq(1)").css("display","block");	
+		if(id==1){ $(".show_best_area").css("display","block");	}
+		else{ $(".show_best_area").css("display","block");	}
+		
 	})
-})*/
+})
 </script>
-<p><a style="font-size:22px; color:#b22825;" class="best_hot">精品推荐</a>　｜　
-	<a style="font-size:22px;" class="best_hot">热卖商品</a>
+<p class="rs_pbox_tit"><a style="font-size:22px; color:#b22825;cursor:pointer;" class="best_hot">精品推荐</a>　｜　
+	<a style="font-size:22px;cursor:pointer" class="best_hot">热卖商品</a>
 </p>
 <!-- #BeginLibraryItem "/library/recommend_best.lbi" --> <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --> <!-- #EndLibraryItem -->
