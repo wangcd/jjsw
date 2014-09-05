@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- {if $promotion_goods} -->
 <div class="rs_pbox">
-	<div class="rs_pbox_tit"><span>限时抢购</span></div>
+	<div class="rs_pbox_tit"><span style="font-size:22px;cursor:pointer;">限时</span><span style="font-size:22px; color:#b22825;cursor:pointer;">抢购</span></div>
 	<ul class="rs_pbox_ul">
 		<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
 		<!--{if !$smarty.foreach.promotion_foreach.first}-->
