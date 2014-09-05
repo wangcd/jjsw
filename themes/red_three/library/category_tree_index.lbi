@@ -1,52 +1,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="text/javascript">
           //初始化主菜单
-/*            function sw_nav2(obj,tag)
-            {
+            function sw_nav2(obj,tag)
+            {		
             var DisSub2 = $("#DisSub2_"+obj);
-            var HandleLI2= $("#HandleLI2_"+obj);
+
+			var HandleLI2= $("#HandleLI2_"+obj);
 			var dts= $("#dt_"+obj);
-			$(this).css("background","#ccc");
                 if(tag==1)
-                {
+                {	/*显示子菜单*/
                     DisSub2.show();
-					HandleLI2.addClass("current");
-					$(HandleLI2.parent()).css("background","#f4f4f4");
-					$(dts.next()).addClass("dit");
+					/*改变当前一级菜单所在区域背景*/
+					HandleLI2.addClass("rs_cate_li_on_"+obj);
+					HandleLI2.parent().css("background","#f4f4f4");
+					/*改变下一个一级菜单所在区域背景*/
+					HandleLI2.parent().next().addClass("cd_on_bg");
 					
                 }
                 else
                 {
                     DisSub2.hide();
-					HandleLI2.removeClass("current");
-					$(HandleLI2.parent()).css("background","#fff");
-					$(dts.next()).removeClass("dit");
+					//HandleLI2.removeClass("current");
+					HandleLI2.removeClass("rs_cate_li_on_"+obj);
+					HandleLI2.parent().css("background","#fff");
+					HandleLI2.parent().next().css("background","#fff");
+					HandleLI2.parent().next().removeClass("cd_on_bg");
                 }
-            }
-			
-$(function(){
-	$("#category_tree>.dt").hover(
-		function(){alert("11");},
-		function(){}
-	)
-})*/
-$(function(){
-	$(".dt").hover(
-		function(){ $(this).css("background","url(../images/next_bg.jpg)");},
-		function(){alert("22");}
-	)
-})			
+            }		
 </script>
- 
-    
-    
+
 <div id="category_tree">
 <dl class="clearfix" >
      <!--{foreach from=$categories item=cat name=no}-->
-<div  class="dt" id="dt_{$smarty.foreach.no.iteration}" onMouseOver="sw_nav2({$smarty.foreach.no.iteration},1);" onMouseOut="sw_nav2({$smarty.foreach.no.iteration},0);" >
+<div  class="dt"  onMouseOver="sw_nav2({$smarty.foreach.no.iteration},1);" onMouseOut="sw_nav2({$smarty.foreach.no.iteration},0);" >
 
 
-                <div id="HandleLI2_{$smarty.foreach.no.iteration}" class="rs_cate_li">
+                <div id="HandleLI2_{$smarty.foreach.no.iteration}" class="rs_cate_li rs_cate_li_{$smarty.foreach.no.iteration}" style="">
                 <a class="rs_cate_tit" href="{$cat.url}">
                     {$cat.name|escape:html}
                 </a>
