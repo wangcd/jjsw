@@ -56,28 +56,13 @@
 <div style="float:left; width:744px; margin: 0px 0 5px -11px;"> 
 <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
  
- 
-<!-- TemplateBeginEditable name="banner下方区域" -->
-<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
-
-<!-- {if $new_goods} -->
-<!-- {if $cat_rec_sign neq 1} -->
-<div id="show_new_area" class="clearfix">
-  <!-- {/if} -->
-  <!--{foreach from=$new_goods item=goods}-->
+<!--bannan下方-->
+<!-- {if $new_goods} --><!--{foreach from=$new_goods item=goods}-->
   <div class="goods_show_Item">
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="215" /></a><br />  
+      <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" height="168" /></a><br />  
   </div>
-  <!--{/foreach}-->
- 
-  <!-- {if $cat_rec_sign neq 1} -->
-</div>
-<div class="blank"></div>
-  <!-- {/if} -->
-<!-- {/if} -->
-
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
+<!--{/foreach}--><!-- {/if} -->
+<!--bannan下方-->
 
 </div>
 <div class="rs_bn_rt">
@@ -98,28 +83,38 @@
 		</div>
 	</div>
  <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
-
-{insert name='ads' id=$ads_id num=$ads_num}
- <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
-	<div id="rs_jq_bnr" class="rs_bnr_box">
-		<div class="rs_bnr_boxtit">
-			<h2><a href="../search.php?intro=promotion" target="_blank">今日特价</a></h2>
-			<div class="fr"><a href="../search.php?intro=promotion" target="_blank">更多&nbsp;&gt;&gt;</a></div>
+	<div id="" class="cd_jq_bnr">
+		<div class="rs_bnr_g">
+			<div class="rs_bnr_gname">
+					<span class="cd_p_l">热卖商品</span>
+					<span class="cd_p_r">{$hot_goods[0][name]|escape:html}</span>
+			</div>        
+			<div class="rs_bnr_gimg">
+            	<a href="{$hot_goods[0][url]}" class="rs_bnr_gimg_a"><img src="{$hot_goods[0][thumb]}" border="0" width="130" height="130"/></a>
+            	<div class="price">
+                	<span class="top_best_price">{$hot_goods[0][shop_price]}</span>
+                    <span class="top_best_old_price">{$hot_goods[0][market_price]}</span>
+                    <a href=""><img src="images/qgm.jpg" width="65" height="25"/></a>
+                </div>
+            </div>
 		</div>
 		<div class="rs_bnr_g">
-			<div class="rs_bnr_gimg"><a href="{$promotion_goods[0][url]}"><img src="{$promotion_goods[0][thumb]}" border="0" alt="{$promotion_goods[0][name]|escape:html}" /></a></div>
-			<div class="rs_bnr_timg">今日<br />特价</div>
 			<div class="rs_bnr_gname">
-				<div class="rs_bnr_gname_p">
-					<span class="rs_p_l">{$promotion_goods[0][promote_price]}</span>
-					<span class="rs_p_r"><del>{$promotion_goods[0][market_price]}</del></span>
-				</div>
-				<div class="rs_bnr_gname_n"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$promotion_goods[0][name]|escape:html}</a></div>
-			</div>
+					<span class="cd_p_l">精品推荐</span>
+					<span class="cd_p_r">{$best_goods[0][name]|escape:html}</span>
+			</div>        
+			<div class="rs_bnr_gimg">
+            	<a href="{$best_goods[0][url]}" class="rs_bnr_gimg_a"><img src="{$best_goods[0][thumb]}" border="0" width="130" height="130"/></a>
+            	<div class="price">
+                	<span class="top_best_price">{$best_goods[0][shop_price]}</span>
+                    <span class="top_best_old_price">{$best_goods[0][market_price]}</span>
+                    <a href=""><img src="images/qgm.jpg" width="65" height="25"/></a>
+                </div>
+            </div>
 		</div>
 	</div>
+    
 </div>
 
 <div class="blank"></div>
