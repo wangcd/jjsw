@@ -159,19 +159,27 @@ function countDown(time, elemId){
 <!-- #BeginLibraryItem "/library/recommend_promotion.lbi" --> <!-- #EndLibraryItem -->
 <script>
 $(function(){
-	$(".best_hot").click(function(){
-		var id=$(this).index();
-		$(".best_hot").css("color","#300");
-		$(this).css("color","#b22825");
-		$(".show_best_area").css("display","none");
-		if(id==1){ $(".show_best_area").css("display","block");	}
-		else{ $(".show_best_area").css("display","block");	}
-		
-	})
+	$(".show_best_area:eq(1)").hide();
 })
+function change(id){
+	if(id==1){
+		$(".best_hot").css("color","#333");
+		$("#best").css("color","#b22825");
+		$(".show_best_area").hide();
+		$(".show_best_area:eq(0)").show();
+	}else{ 
+		$(".best_hot").css("color","#333");
+		$("#hot").css("color","#b22825");
+		$(".show_best_area").hide();
+		$(".show_best_area:eq(1)").show();
+	}
+}
+
 </script>
-<p class="rs_pbox_tit"><a style="font-size:22px; color:#b22825;cursor:pointer;" class="best_hot">精品推荐</a>　｜　
-	<a style="font-size:22px;cursor:pointer" class="best_hot">热卖商品</a>
+<p class="rs_pbox_tit">
+	<a class="best_hot" id="best" onclick="change(1)">精品推荐</a>　｜　
+	<a class="best_hot" id="hot" onclick="change(2)">热卖商品</a>
+    <span style="float:right;"><a href="" style="color:#cc0001;">更多优惠</a><img src="../images/gdyh.jpg"></span>
 </p>
 <!-- #BeginLibraryItem "/library/recommend_best.lbi" --> <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --> <!-- #EndLibraryItem -->

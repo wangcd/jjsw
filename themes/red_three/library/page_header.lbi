@@ -1,32 +1,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="themes/red_three/qq/images/qq.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-var process_request = "{$lang.process_request}";
-</script>
+<script>
 
-<!--顶部导航-->
-<script type="text/javascript">
-          //初始化主菜单
-            function sw_nav(obj,tag)
-            {
-     
-            var DisSub = document.getElementById("DisSub_"+obj);
-            var HandleLI= document.getElementById("HandleLI_"+obj);
-                if(tag==1)
-                {
-                    DisSub.style.display = "block";
-             
-                    
-                }
-                else
-                {
-                    DisSub.style.display = "none";
-                
-                }
-     
-            }
-     
-    </script>
+	 function aaa(){ alert('111');}
+</script>
 
 
 <!-- 顶部灰色 start -->
@@ -40,24 +17,25 @@ var process_request = "{$lang.process_request}";
     </div>
     <div class="hd_top_manu clearfix">
       <ul class="clearfix">
-        <li class="hd_my_order"> <a href="user.php?act=order" target="_blank"><s></s>我的订单</a> </li>
+        <li class="hd_my_order"> <a href="user.php?act=order_list" target="_blank"><s></s>我的订单</a> </li>
+        <li class="cd_my_order"> <a href="" onClick="aaa()" target="_blank"><s></s>便民服务</a> 
+ 			<ul class="cd_now_order">
+            	<li><a href="">移动充值</a></li>
+                <li><a href="">联通充值</a></li>
+                <li><a href="">火车票预订</a></li>
+                <li><a href="">飞机票预定</a></li>
+                <li><a href="">天气预报</a></li>
+            </ul>       
+        </li>
         <!--{if $navigator_list.top}--> 
         <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} --> 
         <li class="hd_menu_tit" 
-        
-        
-        
-        
-        
+               
         <!-- {if $smarty.foreach.nav_top_list.last} --> 
         style="background:none;" 
         <!-- {/if} --> 
         > <a href="{$nav.url}" 
-        
-        
-        
-        
-        
+         
         <!-- {if $nav.opennew eq 1} --> 
         target="_blank" 
         <!-- {/if} --> 
@@ -75,8 +53,6 @@ var process_request = "{$lang.process_request}";
 <div id="logo_box" class="wrap clearfix">
   <div id="logo_areaID" class="hd_logo_area fl clearfix"> <a href="index.php" class="fl"> <img src="images/logo.jpg"> </a> </div>
   <script type="text/javascript">
-    {literal}
-    <!--
     function checkSearchForm()
     {
         if(document.getElementById('keyword').value)
@@ -89,8 +65,7 @@ var process_request = "{$lang.process_request}";
             return false;
         }
     }
-    -->
-    {/literal}
+
     </script>
   <div class="hd_head_search">
     <div class="hd_search_form clearfix">
@@ -98,7 +73,7 @@ var process_request = "{$lang.process_request}";
         <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
           <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="{$search_keywords|escape}" >
           <!--搜索提示 begin-->
-          <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
+          <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" vspace="111">
           </input>
         </form>
       </div>

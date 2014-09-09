@@ -15,6 +15,7 @@
 					HandleLI2.parent().css("background","#f4f4f4");
 					/*改变下一个一级菜单所在区域背景*/
 					HandleLI2.parent().next().addClass("cd_on_bg");
+					HandleLI2.find('a').css("color","#B20000");
 					
                 }
                 else
@@ -25,6 +26,7 @@
 					HandleLI2.parent().css("background","#fff");
 					HandleLI2.parent().next().css("background","#fff");
 					HandleLI2.parent().next().removeClass("cd_on_bg");
+					HandleLI2.find('a').css("color","#fff");
                 }
             }		
 </script>
@@ -48,6 +50,7 @@
                     {$rs_child.name|escape:html}
                 </a>
                 <!--{/foreach}-->
+                <hr/>
                 </div>
 
                 <dd  id=DisSub2_{$smarty.foreach.no.iteration} style="display:none"> 

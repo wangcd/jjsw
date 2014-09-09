@@ -496,6 +496,9 @@ if (!$smarty->is_cached('category.dwt', $cache_id))
     assign_dynamic('category'); // 动态内容
 }
 $smarty->assign('hot_goods',       get_recommend_goods('hot'));     // 热点文章
+// $aa= get_recommend_goods('hot');
+// echo "<>";
+// print_r($aa);exit();
 $smarty->display('category.dwt', $cache_id);
 
 /*------------------------------------------------------ */

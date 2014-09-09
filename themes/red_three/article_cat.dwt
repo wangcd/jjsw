@@ -26,9 +26,10 @@
 </div>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+
 
 <div class="block clearfix">
+ <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
   <!--left start-->
   <div class="AreaL">
 <!-- #BeginLibraryItem "/library/left_help.lbi" --><!-- #EndLibraryItem -->

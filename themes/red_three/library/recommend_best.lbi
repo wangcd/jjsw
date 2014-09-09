@@ -24,6 +24,5 @@
   <!--{/foreach}-->
   <!-- {if $cat_rec_sign neq 1} -->
 </div>
-<div class="blank"></div>
   <!-- {/if} -->
 <!-- {/if} -->

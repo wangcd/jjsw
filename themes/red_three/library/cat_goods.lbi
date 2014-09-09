@@ -13,7 +13,7 @@
 					<!--{/foreach}-->
 				<!--{/if}-->
 				<!--{/foreach}-->        
-        <a href="" style="float:right; padding-left:30px;">更多>></a></div>
+        <a href="category-{$goods_cat.id}-b0.html" style="float:right; padding-left:30px;">更多>></a></div>
     </div>
 	<div class="rs_ig_l">
 		<div class="rs_igl_l" style="background:url(../images/{$goods_cat.id}f.jpg)">

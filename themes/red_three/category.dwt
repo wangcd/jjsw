@@ -12,6 +12,7 @@
 <!-- {if $cat_style} -->
 <link href="{$cat_style}" rel="stylesheet" type="text/css" />
 <!-- {/if} -->
+{insert_scripts files='common.js}
  <style>
 	div, p, table, th, td {
 		list-style:none;
@@ -158,9 +159,9 @@ ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height
 
   //-->
   </SCRIPT>
-{insert_scripts files='jquery-1.8.3.min.js,common.js,index.js'}
+
 </head>
-<body>
+<body class="index_page">
 <div class="top_adv">
 <!-- TemplateBeginEditable name="头部广告" -->
 <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
@@ -177,6 +178,15 @@ ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height
   	<div class="cd_category_tree">
     <!-- TemplateBeginEditable name="左边区域" -->
 <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+
+<p class="cd_category_rqph">所有类目</p>
+<TABLE border=0 height=600px align="center" border="1px solid">
+	<TR>
+		<TD align=left valign=top>
+			<ul id="tree" class="ztree" style="overflow:auto;"></ul>
+		</TD>
+	</TR>
+</TABLE>
  <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 	</div>
@@ -374,7 +384,34 @@ ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height
  </div>
 </div>
 <div class="blank5"></div>
-
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
  <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/pages.lbi" -->
 

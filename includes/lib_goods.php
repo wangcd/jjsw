@@ -340,6 +340,7 @@ function get_recommend_goods($type = '', $cats = '')
         }
     }
     return $type_goods[$type];
+
 }
 
 /**
