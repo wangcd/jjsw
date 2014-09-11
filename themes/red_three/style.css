@@ -3225,7 +3225,7 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 }
 /*首页下方文章列表*/
 .ft_help_list {
-	width: 1150px;
+	width: 1200px;
 	height:230px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -3838,7 +3838,7 @@ text-align:right;
 	overflow: hidden;
 }
 .rs_iglr_p .rs_pp {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	color: #B20000;
 }
@@ -4097,5 +4097,5 @@ ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height
 /*人气排行*/
 .cd_title_rq{ display:block; width:140px; height:35px; overflow: hidden;}
 /*便民服务*/
-.cd_now_order{ position: absolute; border:1px solid #ccc; left:-5px; }
+.cd_now_order{ position: absolute; border:1px solid #ccc; left:-5px; display:none; }
 .cd_now_order li{ width:70px; text-align:center; background:#FFF;}
