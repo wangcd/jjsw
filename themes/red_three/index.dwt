@@ -179,7 +179,7 @@ function change(id){
 <p class="rs_pbox_tit">
 	<a class="best_hot" id="best" onclick="change(1)">精品推荐</a>　｜　
 	<a class="best_hot" id="hot" onclick="change(2)">热卖商品</a>
-    <span style="float:right;"><a href="" style="color:#cc0001;">更多优惠</a><img src="../images/gdyh.jpg"></span>
+    <span style="float:right;"><a href="search-best.html" style="color:#cc0001;">更多优惠</a><img src="../images/gdyh.jpg"></span>
 </p>
 <!-- #BeginLibraryItem "/library/recommend_best.lbi" --> <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --> <!-- #EndLibraryItem -->

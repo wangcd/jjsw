@@ -300,7 +300,7 @@ h6 span {
 	float: right;
 }
 .AreaR h3{ background:#f4f4f4;}
-.AreaR h3 span{ background:#cc0001; width:200px; padding-left:20px; color:#fff;}
+.AreaR h3 span{ background:#8F8989; width:200px; padding-left:20px; color:#fff;}
 /* ====================
      导航部分
 ==================== */
@@ -3656,15 +3656,16 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 	border-left: #ddd 1px solid;	
 }
 .rs_pbox_ul li {
-	width: 210px;
 	float: left;
 	position: relative;
 	overflow: hidden;
-	/* padding: 10px 18px 15px 18px; */
 	text-align: left;
 	line-height: 20px;
-	padding: 5px 15px;
 	border-right: 1px solid #e2e2e2;	
+}
+.cd_rp_con{
+	width: 210px;
+	padding: 5px 15px;
 }
 .rs_pbox_ul .rs_gl_img {
 /*	width: 201px;
@@ -3676,10 +3677,11 @@ ul.shoppingMes li.welcomeVjia .loginvjia {
 }
 .rs_pbox_n {
 	text-align: center;
-	height: 24px;
+	height: 30px;
 	line-height: 24px;
-	width: 180px;
+	width: 240px;
 	overflow: hidden;
+	background: #f4f4f4;
 }
 .rs_pbox_n img {
 	vertical-align: bottom;
@@ -3884,7 +3886,7 @@ text-align:right;
 .cd_rqph{ height:489px; overflow:hidden; border-bottom:1px solid #CCC; border-right:1px solid #CCC;}
 .cd_rqph_tit{height:25px; font-size:14px; font-weight:bold; line-height:25px; background:#f4f4f4;}
 .cd_rqph li{ height:72px; border-bottom:1px dotted #CCCCCC; padding:10px 15px;}
-.cd_rqph li p{ width:140px; overflow:hidden; line-height:30px;}
+.cd_rqph li p{ width:140px; overflow:hidden;}
 .sml_red{ color:#B20000; font-size:14px; font-weight:bold;}
 
 .rs_ig_r_brand {
@@ -3990,8 +3992,9 @@ padding: 10px 15px;}
 	padding: 0 6px;
 	border: 1px solid #FAFAFA;
 	background: url(images/indexhead_sprite.png) no-repeat right -775px;
+	
 }
-.cd_my_order ul{ display:none;}
+
 /*精品推进，热卖商品*/
 
 .best_hot{ font-size:22px;cursor:pointer;}
@@ -4091,3 +4094,8 @@ span.tmpzTreeMove_arrow {width:16px; height:16px; display: inline-block; padding
 
 ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height:auto;overflow:hidden; background-color:#cfcfcf; border:1px #00B83F dotted; opacity:0.8; filter:alpha(opacity=80)}
 .zTreeMask {z-index:10000; background-color:#cfcfcf; opacity:0.0; filter:alpha(opacity=0); position:absolute}	
+/*人气排行*/
+.cd_title_rq{ display:block; width:140px; height:35px; overflow: hidden;}
+/*便民服务*/
+.cd_now_order{ position: absolute; border:1px solid #ccc; left:-5px; }
+.cd_now_order li{ width:70px; text-align:center; background:#FFF;}

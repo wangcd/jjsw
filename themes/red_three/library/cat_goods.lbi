@@ -77,7 +77,7 @@
                     <li>
                     	<img src="{$goods.thumb}" width="60" style="float:left;">
                         <p style="float:right;">
-                            <a href="{$goods.url}">{$goods.name|escape:html}</a><br>
+                            <a class="cd_title_rq" href="{$goods.url}">{$goods.name|escape:html}</a><br>
                             售价：<span class="sml_red">
                                 <!-- {if $goods.promote_price neq ""} -->
                                 {$goods.promote_price}
