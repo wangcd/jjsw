@@ -423,7 +423,7 @@ if (!$smarty->is_cached('category.dwt', $cache_id))
     $smarty->assign('page_title',       $position['title']);    // 页面标题
     $smarty->assign('ur_here',          $position['ur_here']);  // 当前位置
 
-	$data= get__tree();
+	$data= get__tree($cat_id);
     $menu_json = json_encode($data);
     $smarty->assign('menu_json', $menu_json);
 	
@@ -702,20 +702,18 @@ function get_parent_grade($cat_id)
 
 }
 /*获取商品分类列表*/
-function get__tree()
-{
-
+function get__tree($cat_id)
+{			
         $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1";
         $res = $GLOBALS['db']->getAll($sql);
-//              echo "<pre>";
-//              print_r($res);
-//              echo "</pre>";exit();  
 		$i=0;      
         foreach ($res as $row)
         {	   $cat_arr[$i]['id']   = $row['id'];
         	   $cat_arr[$i]['pId']   = $row['pId'];
                $cat_arr[$i]['name'] = $row['name'];	
                $cat_arr[$i]['url']  = build_uri('category', array('cid' => $row['id']), $row['name']);
+               if($cat_arr[$i]['id']==$cat_id){ $cat_arr[$i]['open']='true';}
+//                else {$cat_arr[$i]['open']='false';}
                $i++;
         }
          return $cat_arr;
