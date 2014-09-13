@@ -702,21 +702,50 @@ function get_parent_grade($cat_id)
 
 }
 /*获取商品分类列表*/
+// function get__tree($cat_id)
+// {			
+//         $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1";
+//         $res = $GLOBALS['db']->getAll($sql);
+// 		$i=0;      
+//         foreach ($res as $row)
+//         {	   $cat_arr[$i]['id']   = $row['id'];
+//         	   $cat_arr[$i]['pId']   = $row['pId'];
+//                $cat_arr[$i]['name'] = $row['name'];	
+//                $cat_arr[$i]['url']  = build_uri('category', array('cid' => $row['id']), $row['name']);
+//                if($cat_arr[$i]['id']==$cat_id){ $cat_arr[$i]['open']='true';}
+// //                else {$cat_arr[$i]['open']='false';}
+//                $i++;
+//         }
+//          return $cat_arr;
+// }
 function get__tree($cat_id)
-{			
-        $sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1";
-        $res = $GLOBALS['db']->getAll($sql);
-		$i=0;      
-        foreach ($res as $row)
-        {	   $cat_arr[$i]['id']   = $row['id'];
-        	   $cat_arr[$i]['pId']   = $row['pId'];
-               $cat_arr[$i]['name'] = $row['name'];	
-               $cat_arr[$i]['url']  = build_uri('category', array('cid' => $row['id']), $row['name']);
-               if($cat_arr[$i]['id']==$cat_id){ $cat_arr[$i]['open']='true';}
-//                else {$cat_arr[$i]['open']='false';}
-               $i++;
-        }
-         return $cat_arr;
-}
+{	
+	$sql='SELECT parent_id as pId FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1 AND cat_id=".$cat_id;
+	$res = $GLOBALS['db']->getAll($sql);
+	$num[0]=$cat_id;
+	$i=1;
+	while($res[0]['pId']!=0){
+		$num[$i]=$res[0]['pId'];
+		$sql='SELECT parent_id as pId FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1 AND cat_id=".$res[0]['pId'];
+		$res = $GLOBALS['db']->getAll($sql);
+		$i++;
+	}	
 
+	$sql = 'SELECT cat_id as id,parent_id as pId,cat_name as name FROM ' . $GLOBALS['ecs']->table('category')." where is_show = 1";
+	$res = $GLOBALS['db']->getAll($sql);
+	$i=0;
+	foreach ($res as $row)
+	{	
+		$cat_arr[$i]['id']   = $row['id'];
+		$cat_arr[$i]['pId']   = $row['pId'];
+		$cat_arr[$i]['name'] = $row['name'];
+		$cat_arr[$i]['url']  = build_uri('category', array('cid' => $row['id']), $row['name']);
+	if(in_array($cat_arr[$i]['id'], $num)){
+		$cat_arr[$i]['open']='true';}
+//	if($cat_arr[$i]['id']==$cat_id){ $cat_arr[$i]['open']='true';}
+	//                else {$cat_arr[$i]['open']='false';}
+	$i++;
+	}
+	return $cat_arr;
+}
 ?>
